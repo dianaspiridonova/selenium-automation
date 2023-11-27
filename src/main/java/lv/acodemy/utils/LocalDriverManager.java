@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Objects;
 
 
-
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LocalDriverManager {

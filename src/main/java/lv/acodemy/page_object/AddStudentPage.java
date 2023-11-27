@@ -34,5 +34,7 @@ public class AddStudentPage {
     }
 
 
+    public void setMailField(String s) {
+    }
 }
 

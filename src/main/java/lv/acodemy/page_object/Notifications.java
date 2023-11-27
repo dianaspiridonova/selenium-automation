@@ -3,7 +3,6 @@ package lv.acodemy.page_object;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElement;
@@ -14,7 +13,7 @@ public class Notifications {
 
     WebDriverWait waiter;
 
-    public Notifications(ChromeDriver driver, WebDriverWait wait) {
+    public Notifications(WebDriverWait wait) {
         this.driver = driver;
         this.waiter = wait;
     }
@@ -26,7 +25,7 @@ public class Notifications {
     }
 
     public String getNotificationSuccessMessage() {
-        waiter.until(textToBePresentInElement(getNotificationLocator(),"Student successfully added"));
+        waiter.until(textToBePresentInElement(getNotificationLocator(), "Student successfully added"));
         return getNotificationLocator().getText();
 
     }
